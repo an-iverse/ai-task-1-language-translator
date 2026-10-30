@@ -1,0 +1,10 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #eef2ff; font: 16px/1.5 Arial, sans-serif; color: #172554; }
+.card { width: min(720px, 92vw); padding: 32px; background: white; border-radius: 16px; box-shadow: 0 12px 35px #17255422; }
+h1 { margin-top: 0; } .languages { display: flex; align-items: end; gap: 12px; margin: 24px 0; }
+label { display: grid; gap: 6px; flex: 1; font-weight: bold; } select, textarea, button { font: inherit; border-radius: 8px; border: 1px solid #c7d2fe; padding: 10px; }
+textarea { min-height: 130px; width: 100%; resize: vertical; } button { cursor: pointer; background: #e0e7ff; color: #172554; }
+.primary { width: 100%; margin-top: 16px; background: #4338ca; color: white; border: 0; font-weight: bold; } button:disabled { opacity: .6; cursor: wait; }
+#status { min-height: 24px; color: #b91c1c; } .result { background: #f8fafc; padding: 18px; border-radius: 10px; min-height: 100px; }
+.result-heading { display: flex; justify-content: space-between; align-items: center; } h2 { font-size: 18px; margin: 0; } #output { white-space: pre-wrap; }
+@media (max-width: 500px) { .card { padding: 20px; } }

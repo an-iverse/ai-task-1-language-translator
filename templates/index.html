@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Language Translation Tool</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="card">
+    <h1>Language Translation Tool</h1>
+    <p>Enter text, select languages, and translate it using a translation API.</p>
+    <div class="languages">
+      <label>From
+        <select id="source">
+          <option value="en">English</option><option value="hi">Hindi</option>
+          <option value="es">Spanish</option><option value="fr">French</option>
+          <option value="de">German</option><option value="ta">Tamil</option>
+        </select>
+      </label>
+      <button id="swap" type="button" title="Swap languages">⇄</button>
+      <label>To
+        <select id="target">
+          <option value="hi">Hindi</option><option value="en">English</option>
+          <option value="es">Spanish</option><option value="fr">French</option>
+          <option value="de">German</option><option value="ta">Tamil</option>
+        </select>
+      </label>
+    </div>
+    <label for="input">Text to translate</label>
+    <textarea id="input" placeholder="Type a sentence here..."></textarea>
+    <button class="primary" id="translate" type="button">Translate</button>
+    <p id="status" role="status"></p>
+    <section class="result">
+      <div class="result-heading"><h2>Translation</h2><button id="copy" type="button">Copy</button></div>
+      <p id="output">Your translated text will appear here.</p>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
